@@ -1,18 +1,6 @@
 # SOEN6441 Fall 2023 - Project 
 Warzone (Based on Risk Game) Implementation as part of the SOEN6441 - Advanced Programming Practices (APP) course at <a href="https://www.concordia.ca/"> Concordia University </a>. 
 
-## Team Members
-
-- Muhammad Adnan Asad
-- Sumit Sharma
-- Pranaykumar Chauhan
-- Darshansinh Dilipsinh Devda
-- Dhruvkumar Parmar
-- Dhruv Patel
-
-## Instructor
-Amin Ranj Bar
-
 ## Problem Statement
 The specific project for this semester consists in building a simple “Risk” computer game. The developed program
 will have to be compatible with the rules and map files and the command-line play of the “Warzone” version of
