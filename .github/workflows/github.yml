@@ -1,0 +1,43 @@
+name: Maven_build
+
+# Controls when the workflow will run
+on: push
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v2
+      - name: Set up JDK
+        uses: actions/setup-java@v1
+        with:
+          java-version: 16
+      - name: Build with Maven
+        run: mvn clean install
+
+  test:
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v2
+      - name: Set up JDK
+        uses: actions/setup-java@v1
+        with:
+          java-version: 16
+      - name: Run Junit Tests
+        run: mvn test
+
+  documentation:
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v2
+      - name: Set up JDK
+        uses: actions/setup-java@v1
+        with:
+          java-version: 16
+      - name: Check JavaDoc
+        run: mvn checkstyle:checkstyle
+      - name: Generate JavaDoc
+        run: mvn javadoc:javadoc
